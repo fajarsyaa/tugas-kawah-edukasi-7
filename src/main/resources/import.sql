@@ -1,0 +1,4 @@
+INSERT INTO public.reports(id, created_at, harga, komoditas, tanggal_panen, total, updated_at)VALUES('3587cc98-cb33-4a56-8bba-9fd7bdeda653', '2023-03-14 15:29:47.200', 6000, 'Tomat', '2023-03-14 15:29:47.200', 500, '2023-03-14 15:29:47.200');
+INSERT INTO public.reports(id, created_at, harga, komoditas, tanggal_panen, total, updated_at)VALUES('1df2e422-8684-479b-a5aa-480a53285f2c', '2023-03-14 15:29:47.200', 7500, 'Tomat', '2023-03-14 15:29:47.200', 500, '2023-03-14 15:29:47.200');
+INSERT INTO public.reports(id, created_at, harga, komoditas, tanggal_panen, total, updated_at)VALUES('a702fac2-76f4-4431-8b17-e558036d1ea5', '2023-03-14 15:29:47.200', 6000, 'Tomat', '2023-03-14 15:29:47.200', 500, '2023-03-14 15:29:47.200');
+INSERT INTO public.reports(id, created_at, harga, komoditas, tanggal_panen, total, updated_at)VALUES('978e031a-ad79-45fb-8696-50b92ca71135', '2023-03-14 15:29:47.200', 8000, 'Tomat', '2023-03-14 15:29:47.200', 500, '2023-03-14 15:29:47.200');

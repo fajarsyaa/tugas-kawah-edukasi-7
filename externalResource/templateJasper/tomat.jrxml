@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Tree" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2f6e4db4-9f8f-4ffe-9759-6e1fd142f492">
+    <property name="template.type" value="columnar"/>
+    <property name="com.jaspersoft.studio.data.sql.tables" value="cmVwb3J0cyBBUyAsOTEsNTMsOWY0ZDg5MmMtNTgwNi00MzgwLThiYTItMzIyNGI4OGE2MTNiOw=="/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="jdbc-postgres"/>
+    <style name="Title" forecolor="#000000" fontName="Times New Roman" fontSize="50" isBold="false"/>
+    <style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false"/>
+    <style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+    <style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+    <style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+        <conditionalStyle>
+            <conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+            <style mode="Opaque" backcolor="#F0EFEF"/>
+        </conditionalStyle>
+    </style>
+    <queryString language="SQL">
+        <![CDATA[SELECT created_at,
+	harga,
+	komoditas,
+	tanggal_panen,
+	total,
+	updated_at
+FROM reports]]>
+    </queryString>
+    <field name="komoditas" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="komoditas"/>
+        <property name="com.jaspersoft.studio.field.label" value="komoditas"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="reports"/>
+    </field>
+    <field name="tanggal_panen" class="java.sql.Date">
+        <property name="com.jaspersoft.studio.field.name" value="tanggal_panen"/>
+        <property name="com.jaspersoft.studio.field.label" value="tanggal_panen"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="reports"/>
+    </field>
+    <field name="harga" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.name" value="harga"/>
+        <property name="com.jaspersoft.studio.field.label" value="harga"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="reports"/>
+    </field>
+    <field name="total" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.name" value="total"/>
+        <property name="com.jaspersoft.studio.field.label" value="total"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="reports"/>
+    </field>
+    <field name="created_at" class="java.sql.Date">
+        <property name="com.jaspersoft.studio.field.name" value="created_at"/>
+        <property name="com.jaspersoft.studio.field.label" value="created_at"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="reports"/>
+    </field>
+    <field name="updated_at" class="java.sql.Date">
+        <property name="com.jaspersoft.studio.field.name" value="updated_at"/>
+        <property name="com.jaspersoft.studio.field.label" value="updated_at"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="reports"/>
+    </field>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="133" splitType="Stretch">
+<!--            <image>-->
+<!--                <reportElement x="2" y="0" width="118" height="132" uuid="d47168ce-aae1-4efc-8d24-e15195025a5a"/>-->
+<!--                <imageExpression><![CDATA["externalResource/templateJasper/tree2.png"]]></imageExpression>-->
+<!--            </image>-->
+            <staticText>
+                <reportElement style="Title" x="120" y="10" width="435" height="93" uuid="f49d68fd-a2c7-44ec-a5fc-9300d10c85a1"/>
+                <textElement>
+                    <font size="80" isBold="false"/>
+                </textElement>
+                <text><![CDATA[Laporan]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="SubTitle" x="240" y="100" width="217" height="29" forecolor="#050000" uuid="eef58983-008d-4a5b-8e47-97f8d4670c7a"/>
+                <textElement>
+                    <font size="22" isBold="false"/>
+                </textElement>
+                <text><![CDATA[Panen Tomat]]></text>
+            </staticText>
+            <line>
+                <reportElement positionType="FixRelativeToBottom" x="6" y="132" width="551" height="1" uuid="a2d0f92f-87fb-472f-82d8-c0c0e6a985aa"/>
+            </line>
+        </band>
+    </title>
+    <pageHeader>
+        <band splitType="Stretch"/>
+    </pageHeader>
+    <columnHeader>
+        <band splitType="Stretch"/>
+    </columnHeader>
+    <detail>
+        <band height="129" splitType="Stretch">
+<!--            <image>-->
+<!--                <reportElement x="2" y="0" width="56" height="80" uuid="a0221c49-fb14-4d48-97e4-11333b968c72"/>-->
+<!--                <imageExpression><![CDATA["tree2.png"]]></imageExpression>-->
+<!--            </image>-->
+            <line>
+                <reportElement positionType="FixRelativeToBottom" x="2" y="123" width="551" height="1" uuid="5e41185f-9c90-45ca-839b-e28b308c1430"/>
+            </line>
+            <staticText>
+                <reportElement style="Column header" positionType="Float" x="79" y="0" width="132" height="20" forecolor="#000000" uuid="9dc00f03-a1a6-4f89-97fe-21548044e15b"/>
+                <textElement textAlignment="Right">
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[komoditas]]></text>
+            </staticText>
+            <textField textAdjust="StretchHeight" isBlankWhenNull="true">
+                <reportElement style="Detail" positionType="Float" x="240" y="1" width="338" height="18" uuid="72af9b2c-ab2b-48b5-837f-fc989ae37a5a"/>
+                <textElement>
+                    <font size="14" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{komoditas}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="Column header" positionType="Float" x="79" y="20" width="132" height="20" forecolor="#000000" uuid="4182155b-8a2e-4e80-a529-61690df456ea"/>
+                <textElement textAlignment="Right">
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[tanggal_panen]]></text>
+            </staticText>
+            <textField textAdjust="StretchHeight" isBlankWhenNull="true">
+                <reportElement style="Detail" positionType="Float" x="240" y="21" width="338" height="18" uuid="4f683494-befe-44b8-9696-8e7e35cdbb4e"/>
+                <textElement>
+                    <font size="14" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{tanggal_panen}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="Column header" positionType="Float" x="79" y="40" width="132" height="20" forecolor="#000000" uuid="0f4a85e7-6f33-47b7-a125-cd84482e6a41"/>
+                <textElement textAlignment="Right">
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[harga]]></text>
+            </staticText>
+            <textField textAdjust="StretchHeight" isBlankWhenNull="true">
+                <reportElement style="Detail" positionType="Float" x="240" y="41" width="338" height="18" uuid="f0464e01-c8df-4f95-9398-42888b00fc5e"/>
+                <textElement>
+                    <font size="14" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="Column header" positionType="Float" x="79" y="60" width="132" height="20" forecolor="#000000" uuid="58fe63ea-bad1-4de1-9fe8-680c76dcb776"/>
+                <textElement textAlignment="Right">
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[total]]></text>
+            </staticText>
+            <textField textAdjust="StretchHeight" isBlankWhenNull="true">
+                <reportElement style="Detail" positionType="Float" x="240" y="61" width="338" height="18" uuid="66733878-85f9-4fc6-a239-5a66cf518d9a"/>
+                <textElement>
+                    <font size="14" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{total} ]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="Column header" positionType="Float" x="79" y="80" width="132" height="20" forecolor="#000000" uuid="196e2811-4184-4067-862b-e7da299a8988"/>
+                <textElement textAlignment="Right">
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[created_at]]></text>
+            </staticText>
+            <textField textAdjust="StretchHeight" isBlankWhenNull="true">
+                <reportElement style="Detail" positionType="Float" x="240" y="79" width="338" height="18" uuid="0d432eea-b165-4780-bb76-8cadf05312eb"/>
+                <textElement>
+                    <font size="14" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{created_at}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="Column header" positionType="Float" x="79" y="100" width="132" height="20" forecolor="#000000" uuid="92e86d21-07d5-413d-8b7c-d993bf235606"/>
+                <textElement textAlignment="Right">
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[updated_at]]></text>
+            </staticText>
+            <textField textAdjust="StretchHeight" isBlankWhenNull="true">
+                <reportElement style="Detail" positionType="Float" x="240" y="100" width="338" height="18" uuid="9d63700d-60e5-4b2d-a351-2ceece5dc243"/>
+                <textElement>
+                    <font size="14" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{updated_at}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement style="Column header" positionType="Float" x="220" y="60" width="132" height="20" forecolor="#000000" uuid="9f03cc86-0c72-4c97-9333-6978faeab305"/>
+                <textElement textAlignment="Right">
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[Kg]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" positionType="Float" x="220" y="40" width="132" height="20" forecolor="#000000" uuid="c2fdb25a-f9e8-4514-9ff7-fe3b0222828d"/>
+                <textElement textAlignment="Right">
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[/ Kg]]></text>
+            </staticText>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="9" splitType="Stretch">
+            <line>
+                <reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="fab082df-3ca0-43ac-900e-4da3f8b5a45d"/>
+                <graphicElement>
+                    <pen lineWidth="0.5" lineColor="#999999"/>
+                </graphicElement>
+            </line>
+        </band>
+    </columnFooter>
+    <pageFooter>
+        <band height="13" splitType="Stretch">
+            <frame>
+                <reportElement mode="Opaque" x="2" y="0" width="555" height="13" forecolor="#D0B48E" backcolor="#9DB1B8" uuid="bfdca178-800d-445c-9a31-bb616a00e8ce"/>
+                <textField evaluationTime="Report">
+                    <reportElement style="Column header" x="513" y="0" width="40" height="13" forecolor="#FFFFFF" uuid="2fba0f87-635e-476d-858f-d102b26146fe"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="10" isBold="false"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement style="Column header" mode="Transparent" x="433" y="0" width="80" height="13" forecolor="#FFFFFF" uuid="e454d23d-bcfc-4c79-a399-0ef520a3150a"/>
+                    <textElement textAlignment="Right" verticalAlignment="Middle">
+                        <font size="10" isBold="false"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+                </textField>
+                <textField pattern="EEEEE dd MMMMM yyyy">
+                    <reportElement style="Column header" x="2" y="0" width="197" height="13" forecolor="#FFFFFF" uuid="14d8de1e-8695-4078-a67f-0e69172574d5"/>
+                    <textElement verticalAlignment="Middle">
+                        <font size="10" isBold="false"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+                </textField>
+            </frame>
+        </band>
+    </pageFooter>
+    <summary>
+        <band splitType="Stretch"/>
+    </summary>
+</jasperReport>
