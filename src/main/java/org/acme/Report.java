@@ -1,7 +1,9 @@
 package org.acme;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -20,7 +22,9 @@ public class Report extends PanacheEntityBase {
     public LocalDateTime tanggalPanen;
     public Integer harga;
     public Integer total;
+    @CreationTimestamp
     public LocalDateTime created_at;
+    @UpdateTimestamp
     public LocalDateTime updated_at;
 
     public String getId() {

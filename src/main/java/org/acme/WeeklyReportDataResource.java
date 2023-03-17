@@ -40,8 +40,8 @@ public class WeeklyReportDataResource {
         report.komoditas = body.getString("komoditas");
         report.total     = body.getInteger("total");
         report.harga     = body.getInteger("harga");
-        report.tanggalPanen = LocalDateTime.now();
-        report.created_at   = LocalDateTime.now();
+//        report.tanggalPanen = LocalDateTime.now();
+//        report.created_at   = LocalDateTime.now();
         report.updated_at   = null;
         report.persistAndFlush();
         return report;
